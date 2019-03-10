@@ -45,3 +45,16 @@ $user = $this->user;
 <form action="/users/index/" method="post">
 	<input type="submit" value="Показать">
 </form>
+
+<br />
+<h3>Заполнение таблиц категории и товары фейковыми данными</h3>
+<br />
+<br />
+<form action="/random/migration/" method="post">
+	<button type="submit">Пересоздать таблицы</button>
+</form>
+<br />
+<br />
+<form action="/random/populate/" method="post">
+	<button type="submit">Заполнить таблицы фейковыми данными</button>
+</form>

@@ -1,0 +1,24 @@
+<?php
+$categories = $this->categories;
+$products = $this->products;
+?>
+<table>
+    <tr>
+        <th>ID категории</th>
+        <th>Имя категории</th>
+    </tr>
+    <?php foreach ($categories as $category) :    ?>
+        <tr>
+            <td><b><?=$category->id?></b></td>
+            <td><b><?=$category->name?></b></td>
+        </tr>
+        <?php foreach ($products as $product) :    ?>
+            <?php if ($product->category_id == $category->id) :?>
+                <tr>
+                    <td><?=$product->id?></td>
+                    <td><?=$product->name?></td>
+                </tr>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endforeach; ?>
+</table>

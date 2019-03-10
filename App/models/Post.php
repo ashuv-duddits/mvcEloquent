@@ -7,11 +7,11 @@ class Post
     protected $user_id;
     protected $message;
 
-    public function __construct($userData)
+    public function __construct($data)
     {
-        $this->id = $userData['id'] ?? 0;
-        $this->user_id = $userData['user_id'];
-        $this->message = $userData['message'];
+        $this->id = $data['id'] ?? 0;
+        $this->user_id = $data['user_id'];
+        $this->message = $data['message'];
     }
 
     public function getId()

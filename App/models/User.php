@@ -7,11 +7,11 @@ class User
     protected $login;
     protected $password;
 
-    public function __construct($userData)
+    public function __construct($data)
     {
-        $this->id = $userData['id'] ?? 0;
-        $this->login = $userData['login'];
-        $this->password = $userData['password'];
+        $this->id = $data['id'] ?? 0;
+        $this->login = $data['login'];
+        $this->password = $data['password'];
     }
 
     public function getId()
